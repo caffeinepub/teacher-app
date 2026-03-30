@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Deep blue theme */
+    --background: 0.97 0.005 235;
+    --foreground: 0.17 0.01 264;
+
+    --card: 1 0 0;
+    --card-foreground: 0.17 0.01 264;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.17 0.01 264;
+
+    /* Deep navy #0B3B66 */
+    --primary: 0.28 0.09 255;
+    --primary-foreground: 1 0 0;
+
+    --secondary: 0.93 0.02 245;
+    --secondary-foreground: 0.28 0.09 255;
+
+    --muted: 0.93 0.01 235;
+    --muted-foreground: 0.52 0.01 264;
+
+    /* Active blue #60A5FA */
+    --accent: 0.7 0.15 250;
+    --accent-foreground: 1 0 0;
+
+    /* Red #EF4444 */
+    --destructive: 0.63 0.24 25;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.91 0.01 235;
+    --input: 0.91 0.01 235;
+    --ring: 0.34 0.11 255;
+
+    --chart-1: 0.7 0.15 250;
+    --chart-2: 0.69 0.21 142;
+    --chart-3: 0.63 0.24 25;
+    --chart-4: 0.8 0.12 80;
+    --chart-5: 0.6 0.18 300;
+
+    --sidebar: 0.28 0.09 255;
+    --sidebar-foreground: 1 0 0;
+    --sidebar-primary: 0.7 0.15 250;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.34 0.11 255;
+    --sidebar-accent-foreground: 1 0 0;
+    --sidebar-border: 0.38 0.09 255;
+    --sidebar-ring: 0.7 0.15 250;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+/* Custom utilities */
+.header-navy {
+  background-color: oklch(0.28 0.09 255);
+}
+
+.header-navy-dark {
+  background-color: oklch(0.22 0.09 255);
+}
+
+.footer-navy {
+  background-color: oklch(0.24 0.09 255);
+}
+
+.live-green {
+  background-color: oklch(0.69 0.21 142);
+}
+
+.text-live-green {
+  color: oklch(0.69 0.21 142);
+}
+
+.live-red {
+  background-color: oklch(0.63 0.24 25);
+}
+
+.active-blue {
+  color: oklch(0.7 0.15 250);
+}
+
+.nav-link {
+  @apply text-white/80 hover:text-white text-sm font-medium transition-colors;
+}
+
+.nav-link.active {
+  @apply text-white;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Teacher App",
+  "short_name": "TeacherApp",
+  "description": "Live streaming classes for teachers and students",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e3a8a",
+  "theme_color": "#1e3a8a",
+  "icons": [
+    {
+      "src": "/assets/generated/teacher-app-icon.dim_64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}
